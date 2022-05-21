@@ -1,0 +1,17 @@
+
++1. auth (back)
+ 2. auth (front)
+ 3. websocket-server 
+ 4. front with only one shared text-area
+ 5. database (ability to save chat)
+ 6. questions from server
+ 7. scores
+ 8. rooms for users
+ 9. add few levels for current world of questions
+ 10. add more worlds
+ 11. design
+ 12. docker
+ 13. deploy web (heroku)
+ 14. multiplatform
+
+
