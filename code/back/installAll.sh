@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CURRENT_FILE_FOLDER="$(pwd -P)"
+
+AUTH_MICROSERVICE_PATH="$CURRENT_FILE_FOLDER/auth"
+QUIZ_MICROSERVICE_PATH="$CURRENT_FILE_FOLDER/quiz"
+TEMPLATE_EXAMPLE_MICROSERVICE_PATH="$CURRENT_FILE_FOLDER/templateExample"
+
+xterm -hold -e "cd $AUTH_MICROSERVICE_PATH; pnpm install" &
+xterm -hold -e "cd $QUIZ_MICROSERVICE_PATH; pnpm install" &
+xterm -hold -e "cd $TEMPLATE_EXAMPLE_MICROSERVICE_PATH; pnpm install" &

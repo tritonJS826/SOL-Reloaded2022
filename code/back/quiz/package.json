@@ -1,16 +1,13 @@
 {
-  "name": "sol-api",
+  "name": "quiz",
   "version": "0.0.1",
-  "description": "sol-api",
+  "description": "Quiz module",
   "main": "index.js",
   "scripts": {
     "start": "webpack",
-    "test": "echo \"test\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "keywords": [
-    "sooner-or-later"
-  ],
   "author": "triton",
   "license": "ISC",
   "dependencies": {
