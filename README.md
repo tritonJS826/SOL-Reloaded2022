@@ -7,6 +7,7 @@ Overview
 * Development of a tool in the form of a game for collaborative interactive learning. The game initially contains content for training, which is laid by the developers. The content is not limited only to the one that was originally in the system. It is a framework that allows to choose the content you want to explore on your own.Anything that can be displayed in a "question-answer" format can be used as content. The effectiveness in the game depends on the skills from real life.
 
 * Main study method: spaced repetition.
+* Using multiplayer game form for studying.
 ---
 
 Potential consumers
@@ -19,15 +20,14 @@ Technologies
 ------------
 * We love javascript because most team members understand it and can support services written in it, but in general we are open to any languages ​​and approaches that can be effective.
 * MainStack:
-    * FS: React, typescript, mobX
-    * GWSS: node, typescript, socket.io
-    * LWSS: node, typescript, webSockets
-    * SDS: node, typescript, GraphQL    
+    * Front: React, typescript, ...
+    * Back: node, typescript, webSocket, socket.io ... 
+
 Git
 ---
 * In the default branch, we do not fill in anything and do not merge without approval.
 * You don't need to formalize PR, but try to think it over, maybe an extra couple of comments will not hurt.
-* We prefer a linear commit history, so we try to use something like rebase locally before uploading to the server.
+* We prefer a linear commit history, so we try to use something like rebase locally before uploading to the server or squosh instead of merge.
 * You should not make many commits in one PR if there is no need for it.
 * One task - preferably one commit (if the task is large, then there may be a couple). One commit - one task.
 * Branch naming:  *[feat/fix/docs/refactor]/[issue number]/description-with-few-worlds*
@@ -45,7 +45,7 @@ Policy
 ---
 Out of scope
 ------------
-* We do not plan to make money on this project yet (but we are ready to consider specific options)
+* We do not plan to make money on this project yet (but we are ready to consider any options)
 * We do not compete with anyone for the market (but we can analyze it and learn from experience)
 
 

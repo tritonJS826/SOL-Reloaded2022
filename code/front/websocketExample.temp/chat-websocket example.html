@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="status"></span>
+    </br></br></br>
+    <input id="messageInput" type="text" value="message"/>
+    </br></br></br>
+    <span>last message in chat (check from 2 devices or tabs):</span>
+
+    <span id="answerText"></span>
+    </br></br></br>
+
+    <div id = "button">
+        <button>Run WebSocket</button>
+    </div>
+    
+    <script type = "text/javascript">
+        const setStatus = (status) => document.getElementById('status').innerHTML = status;
+        const setMessageInput = (message) => document.getElementById('messageInput').value = message;
+        const getMessageInputText = () => document.getElementById('messageInput').value;
+        const setAnswer = (answer) => document.getElementById('answerText').innerHTML = answer;
+        const getButton = () => document.getElementById('button');
+
+        const webSocketTest = () => {
+           if ("WebSocket" in window) {
+                setStatus("WebSocket is supported by your Browser!")
+                ws.send(getMessageInputText());
+            } else {
+                // The browser doesn't support WebSocket
+                setStatus("WebSocket NOT supported by your Browser!");
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // open a web socket
+        const ws = new WebSocket("ws://192.168.100.48:3001/");
+        ws.onopen = () => alert("connection established");
+        ws.onmessage = function (evt) { 
+                    const received_msg = evt.data;
+                    setAnswer(received_msg);
+                };
+                
+                // websocket is closed.
+                ws.onclose = function() {
+                    setStatus("Connection is closed...");
+                };
+
+        getButton().addEventListener('click', webSocketTest);
+    </script>
+    
+    
+</body>
+</html>
