@@ -1,5 +1,7 @@
 Each folder is a module
 
+To run locally use NODE_ENV="development" in .env file
+
 To install all modules...
 
 To start all modules...
