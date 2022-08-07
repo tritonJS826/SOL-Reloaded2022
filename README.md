@@ -1,3 +1,5 @@
+[![CI](https://github.com/tritonJS826/SOL-Reloaded2022/actions/workflows/main.yml/badge.svg)](https://github.com/tritonJS826/SOL-Reloaded2022/actions/workflows/main.yml)
+
 ***SOONER-OR-LATER***
 =====================
 
